@@ -18,12 +18,14 @@ Because data scientists tend to use a number of different python packages in the
 
 Whether you choose to use venv or conda to manage your environments is up to you.  There are subtle differences between them, but neither is better or worse than the other.
 
+For this course, use **Python 3.13** and install the packages listed in the repo `requirements.txt` file (from the repository root).
+
 ## Environments Using venv
 Below is the suggested workflow to set up a new environment for your project using venv.  You will likely want to set up an environment for the materials from this course, and you may want to set up a separate one for your projects, depending on what libraries you plan to use.
 
 1) Create a new environment using venv  
     ```
-    (base) $ python3 -m venv <environment-name>
+    (base) $ python3.13 -m venv <environment-name>
     ```
 
 2) Activate the new environment  
@@ -32,14 +34,14 @@ Below is the suggested workflow to set up a new environment for your project usi
     ```
 
 3) Install packages into the environment  
-    - Install packages manually  
-        ```
-        (env) $ pip install pandas scikit-learn matplotlib notebook
-        ```  
-
-    - Install packages from an existing **requirements.txt** file  
+    - For this course, install from the repo **requirements.txt** (run from the repository root)  
         ```
         (env) $ pip install -r requirements.txt
+        ```
+
+    - Install packages manually for other projects  
+        ```
+        (env) $ pip install pandas scikit-learn matplotlib notebook
         ```
 
     - Show what packages are installed  
@@ -68,9 +70,9 @@ Below is the suggested workflow to set up a new environment for your project usi
 ## Environments Using conda
 Below is the suggested workflow to set up a new environment for your project using conda.  You will likely want to set up an environment for the materials from this course, and you may want to set up a separate one for your projects, depending on what libraries you plan to use.
 
-1) Create a new environment
+1) Create a new environment with Python 3.13
     ```
-    (base) $ conda create –-name <environment-name>
+    (base) $ conda create --name <environment-name> python=3.13
     ```
 
 2) Activate the new environment
@@ -80,14 +82,14 @@ Below is the suggested workflow to set up a new environment for your project usi
 
 3) Install packages into the new environment  
 
-    - Install packages manually using conda (can also use pip instead)  
-        ```
-        (env) $ conda install pandas scikit-learn matplotlib notebook
-        ```
-
-    - Install packages from an existing **requirements.txt** file
+    - For this course, install from the repo **requirements.txt** (run from the repository root)  
         ```
         (env) $ pip install -r requirements.txt
+        ```
+
+    - Install packages manually using conda for other projects (can also use pip instead)  
+        ```
+        (env) $ conda install pandas scikit-learn matplotlib notebook
         ```
     
     - Install packages from an existing **environment.yml** file
